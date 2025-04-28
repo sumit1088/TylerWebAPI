@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("efilling_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e1578cd0287d29c6fd4f90e9fb1441ff1726f6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da54a5e3ea689d4ad7a4ca7ad0ca9f379f8e4895")]
 [assembly: System.Reflection.AssemblyProductAttribute("efilling_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("efilling_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
