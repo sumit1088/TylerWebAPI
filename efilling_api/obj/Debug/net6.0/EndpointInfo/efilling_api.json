@@ -1,0 +1,5857 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "efilling_api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseType": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetFilingCode": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetDocumentCode": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "filingcode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCourtOptionalServices": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "filingcode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPartyTypeCode": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "caseTypeId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCourtNameSuffixCode": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetOptionalServices": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetAllPartyTypes": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseTest": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "CaseTrackingID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "dbed64e6-2379-4290-87b8-a42f958a3e39"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseUserList": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseDetails": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "envelopeID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/ChangePassword": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePassword"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePassword"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePassword"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePassword"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/SaveDraftInitial": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/savedraft": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreateReserveFiling": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservedRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservedRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservedRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReservedRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetDraftCases": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cases"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseDraftDetails/{caseId}": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "caseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cases"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/DiscardDraft/{caseId}": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "caseId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetDraftsCount": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DiscardAllDrafts": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GeSupportStaffList": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/supportstaff"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/supportstaff"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/supportstaff"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetSupportStaffById/{id}": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/supportstaff"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/supportstaff"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/supportstaff"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreateSupportStaff": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateSupportStaff/{id}": {
+      "put": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/supportstaff"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DeleteUser/{id}": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/save": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatchingFilingRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatchingFilingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatchingFilingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatchingFilingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetFilingListAll": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/ServeFiling": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServeFilingRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServeFilingRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServeFilingRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServeFilingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCourtName": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/SelfResendActivationEmail": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CaseRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCaseList_Business": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetAttorneyList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetAttorneyManageUserList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetAttorney": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetAttorneyManage": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAttorney"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCase": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCase"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCase"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCase"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCase"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RegisterUser": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInfo"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInfo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInfo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInfo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetFirm": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetUserList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RegisterFirm": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "t10@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Tyler@123"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/AddUserRole": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreateAttorney": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateAttorney": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttorneyDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RemoveAttorney": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "AttorneyID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetServiceContactList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetServiceContact": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "ServiceContactID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreateServiceContact": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RemoveServiceContact": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "ServiceContactID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateServiceContact": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceContact"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPaymentAccountTypeList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPaymentAccountList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreatePaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentAccount"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentAccount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentAccount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentAccount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccountRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RemovePaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "PaymentAccountID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdatePaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccount"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccount"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccount"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PaymentAccount"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPolicy": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "Courtlocation",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetFilingList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingListRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingListRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingListRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingListRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/NotificationPreferences": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateNotificationPreferences": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetNotificationPreferencesList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetUserRequest": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          },
+          {
+            "name": "UserID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "2d00a052-3290-492c-ae04-887be3f7a5b4"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RemoveUser": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          },
+          {
+            "name": "UserID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "2d00a052-3290-492c-ae04-887be3f7a5b4"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/AuthenticateUser": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Sug123!@"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateUserUserService": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          },
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "UserID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "d8cdd3b4-6965-4b4a-8b42-7af925271afc"
+            }
+          },
+          {
+            "name": "FirstName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Ujjwal"
+            }
+          },
+          {
+            "name": "MiddleName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Deoraoji"
+            }
+          },
+          {
+            "name": "LastName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Nikam"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateUser": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUser"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUser"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUser"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/UpdateFirm": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFirm"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFirm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFirm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFirm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetPublicList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          },
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "FirmName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ASPL"
+            }
+          },
+          {
+            "name": "FirstName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "zahoor"
+            }
+          },
+          {
+            "name": "LastName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ahmed"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetDocument": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          },
+          {
+            "name": "CaseTrackingID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "dbed64e6-2379-4290-87b8-a42f958a3e39"
+            }
+          },
+          {
+            "name": "CaseDocketID",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "227702"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetFeesCalculation": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeesCalculationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeesCalculationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeesCalculationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeesCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetSubSequentFeesCalculation": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/ServiceInformationHistory": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/ServiceAttachCaseList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetServiceInformation": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CreateGlobalPaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GlobalPaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GlobalPaymentAccountList": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/RemoveGlobalPaymentAccount": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/FilingDetails": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/FilingStatus": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FilingDetails"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CancelFiling": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "CourtLocation",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FilingId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/FilingService": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/ServiceTypes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/NotifyCaseAssignmentComplete": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/SecureCase": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "ghorpadesumit471@gmail.com"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "175803a9-f490-4645-b76f-c9337210ff92"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtLocations": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtFilingCodes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCaseCategoryCodes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "CourtCodelistURI",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCaseTypeCodes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCountryCodes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "parameters": [
+          {
+            "name": "CourtCodelistURI",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtdocumenttype": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtfilertype": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtfiletype": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtfilingcomponent": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtoptionalservice": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadCourtpartytype": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/DownloadNameSuffixCodes": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CoreFilingNewCivil": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/CoreFilingSubsequentCivil": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubSequentFeeCalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/ReviewFiling": {
+      "post": {
+        "tags": [
+          "Tyler"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeeCalculationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCourtLocations": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Tyler/GetCategoty": {
+      "get": {
+        "tags": [
+          "Tyler"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PasswordEncrypted",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SecurityQuestion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "SecurityAnswer",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FirstName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MiddleName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "LastName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Suffix",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Organization",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PhoneNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Address1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Address2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "City",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "State",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ZipCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CountryCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FirmName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IsActivated",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "RecieveFilingStatus",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "CcEmails",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CreatedAt",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedAt",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Cases",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Case"
+              }
+            }
+          },
+          {
+            "name": "ServeOnlyCases",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ServeOnlyCase"
+              }
+            }
+          },
+          {
+            "name": "UserAttorneys",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UserAttorney"
+              }
+            }
+          },
+          {
+            "name": "UserParties",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UserParty"
+              }
+            }
+          },
+          {
+            "name": "UserPaymentAccounts",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UserPaymentAccount"
+              }
+            }
+          },
+          {
+            "name": "UserServiceContacts",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/UserServiceContact"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttorneyDetails": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "barId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeUserLogin": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeServiceContact": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeServiceContactPublic": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeFirmAdmin": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "recFilingStatusEmails": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "attorneyID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Case": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "courtId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "caseTypeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "incidentZipCourt": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "jurisdictionalAmount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isConditionallySealed": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isComplexCase": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isClassAction": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isAsbestos": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isCalEnvQualityAct": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "caseTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "isMonetaryRemedy": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isPunitiveRemedy": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isDeclaratoryInjunctiveRemedy": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "noOfCausesOfActions": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "rentPerDayAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "streetNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "streetName": {
+            "type": "string",
+            "nullable": true
+          },
+          "directional": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "postalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userPaymentAccId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "filingForAttorneyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "totalFees": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "clientMatterNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtesyEmailNotice": {
+            "type": "string",
+            "nullable": true
+          },
+          "noteToClerk": {
+            "type": "string",
+            "nullable": true
+          },
+          "filingInfoIsVerified": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "envelopeNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "modified_at": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "caseType": {
+            "$ref": "#/components/schemas/CaseType"
+          },
+          "court": {
+            "$ref": "#/components/schemas/Court"
+          },
+          "createdByNavigation": {
+            "$ref": "#/components/schemas/User"
+          },
+          "filingForAttorney": {
+            "$ref": "#/components/schemas/UserAttorney"
+          },
+          "userPaymentAcc": {
+            "$ref": "#/components/schemas/UserPaymentAccount"
+          },
+          "caseParty": {
+            "$ref": "#/components/schemas/CaseParty"
+          },
+          "caseDocuments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseDocument"
+            },
+            "nullable": true
+          },
+          "caseParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseParty"
+            },
+            "nullable": true
+          },
+          "caseServiceContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseServiceContact"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseDocument": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtDocId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nameExtension": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "security": {
+            "type": "string",
+            "nullable": true
+          },
+          "qty": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtReservationNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "filedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "case": {
+            "$ref": "#/components/schemas/Case"
+          },
+          "courtDoc": {
+            "$ref": "#/components/schemas/CourtDocument"
+          },
+          "filedByNavigation": {
+            "$ref": "#/components/schemas/UserParty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseParty": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "role": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressUnknown": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "internationalAddress": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "saveToAddressBook": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "feeExemption": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "interpreter": {
+            "type": "string",
+            "nullable": true
+          },
+          "representingAttorneyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "filingParty": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "case": {
+            "$ref": "#/components/schemas/Case"
+          },
+          "representingAttorney": {
+            "$ref": "#/components/schemas/UserAttorney"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseRequest": {
+        "type": "object",
+        "properties": {
+          "caseNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseServiceContact": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userAttorneyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userServiceContactId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "eServe": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "serviceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "case": {
+            "$ref": "#/components/schemas/Case"
+          },
+          "userAttorney": {
+            "$ref": "#/components/schemas/UserAttorney"
+          },
+          "userServiceContact": {
+            "$ref": "#/components/schemas/UserServiceContact"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseType": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "providerFee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "primaryCaseType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "caseStatus": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "court": {
+            "$ref": "#/components/schemas/Court"
+          },
+          "caseTypeParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseTypeParty"
+            },
+            "nullable": true
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Case"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CaseTypeParty": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseTypeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "demandedParties": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "caseType": {
+            "$ref": "#/components/schemas/CaseType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Cases": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalFees": {
+            "type": "number",
+            "format": "double"
+          },
+          "envelopeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "noteToClerk": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "submittedDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedAttorneySec": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtesyemail": {
+            "type": "string",
+            "nullable": true
+          },
+          "filingID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDraft": {
+            "type": "boolean"
+          },
+          "draftSavedAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseIDResp": {
+            "type": "string",
+            "nullable": true
+          },
+          "isExistingCase": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "caseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTrackingID": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseFilingId": {
+            "type": "string",
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Documents"
+            },
+            "nullable": true
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Parties"
+            },
+            "nullable": true
+          },
+          "selectedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedParties"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "County": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "courts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Court"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Court": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "hasOptionalServices": {
+            "type": "boolean"
+          },
+          "transactionFee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "countyId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "county": {
+            "$ref": "#/components/schemas/County"
+          },
+          "caseTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseType"
+            },
+            "nullable": true
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Case"
+            },
+            "nullable": true
+          },
+          "courtDocuments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourtDocument"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourtDocument": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "docFee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "docType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "qty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "court": {
+            "$ref": "#/components/schemas/Court"
+          },
+          "caseDocuments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseDocument"
+            },
+            "nullable": true
+          },
+          "courtOptionalServices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourtOptionalService"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourtOptionalService": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "opSrvFee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "courtOpSrvType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtDocId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "courtDoc": {
+            "$ref": "#/components/schemas/CourtDocument"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePaymentAccount": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccountTypeCodeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardType": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardLast4": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardMonth": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cardYear": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cardHolderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "cvv": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Data": {
+        "type": "object",
+        "properties": {
+          "matchingFiling": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchingFilingDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateField": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/Field"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Document": {
+        "type": "object",
+        "properties": {
+          "documentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileBase64": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityTypes": {
+            "type": "string",
+            "nullable": true
+          },
+          "fee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "optionalServicesSelections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionalService"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentIdentification": {
+        "type": "object",
+        "properties": {
+          "identificationID": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "item": {
+            "$ref": "#/components/schemas/Field"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DocumentSubmitter": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/PersonItem"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Documents": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "envelopeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileBase64": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityTypes": {
+            "type": "string",
+            "nullable": true
+          },
+          "fee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "case": {
+            "$ref": "#/components/schemas/Cases"
+          },
+          "optionalServices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OptionalServices"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeeCalculationRequest": {
+        "type": "object",
+        "properties": {
+          "isExistingCase": {
+            "type": "boolean"
+          },
+          "caseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedAttorneySec": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtesyemail": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "filingID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "courtLocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTrackingID": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "nullable": true
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Party"
+            },
+            "nullable": true
+          },
+          "selectedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedParty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FeesCalculationRequest": {
+        "type": "object",
+        "properties": {
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "nullable": true
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Party"
+            },
+            "nullable": true
+          },
+          "selectedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedParty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Field": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FilingDetails": {
+        "type": "object",
+        "properties": {
+          "filingId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FilingListRequest": {
+        "type": "object",
+        "properties": {
+          "courtlocation": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FilingStatus": {
+        "type": "object",
+        "properties": {
+          "filingStatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusDescriptionText": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Field"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAttorney": {
+        "type": "object",
+        "properties": {
+          "attorneyID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetCase": {
+        "type": "object",
+        "properties": {
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTrackingID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatchingFilingDTO": {
+        "type": "object",
+        "properties": {
+          "caseTitle": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "caseNumber": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "caseJudge": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "filingType": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "filingAttorney": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "filingCode": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "organizationIdentificationID": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "caseCategoryCode": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "caseTypeCode": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "documentDescriptionText": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "documentFileControlID": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "documentFiledDate": {
+            "$ref": "#/components/schemas/DateField"
+          },
+          "documentIdentification": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentIdentification"
+            },
+            "nullable": true
+          },
+          "documentReceivedDate": {
+            "$ref": "#/components/schemas/DateField"
+          },
+          "documentSubmitter": {
+            "$ref": "#/components/schemas/DocumentSubmitter"
+          },
+          "caseTrackingID": {
+            "$ref": "#/components/schemas/Field"
+          },
+          "filingStatus": {
+            "$ref": "#/components/schemas/FilingStatus"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatchingFilingRequest": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/Data"
+          },
+          "success": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionalService": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "multiplier": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OptionalServices": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "documentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionalServiceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "multiplier": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "envelopeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "documentTypeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "fee": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "document": {
+            "$ref": "#/components/schemas/Documents"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Parties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "casesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "selectedPartyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressUnknown": {
+            "type": "boolean"
+          },
+          "internationalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "saveToAddressBook": {
+            "type": "boolean"
+          },
+          "selectedAttorney": {
+            "type": "string",
+            "nullable": true
+          },
+          "envelopeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedBarNumbers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedBarNumber"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Party": {
+        "type": "object",
+        "properties": {
+          "selectedPartyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleType": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zip": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressUnknown": {
+            "type": "boolean"
+          },
+          "internationalAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "saveToAddressBook": {
+            "type": "boolean"
+          },
+          "selectedAttorney": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedBarNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentAccount": {
+        "type": "object",
+        "properties": {
+          "paymentAccountID": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentAccountRequest": {
+        "type": "object",
+        "properties": {
+          "paymentAccountID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonItem": {
+        "type": "object",
+        "properties": {
+          "personName": {
+            "$ref": "#/components/schemas/PersonName"
+          },
+          "personOtherIdentification": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocumentIdentification"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PersonName": {
+        "type": "object",
+        "properties": {
+          "personFullName": {
+            "$ref": "#/components/schemas/Field"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReservedRequest": {
+        "type": "object",
+        "properties": {
+          "isExistingCase": {
+            "type": "boolean"
+          },
+          "caseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedAttorneySec": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtesyemail": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTitle": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SelectedBarNumber": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "barNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "party": {
+            "$ref": "#/components/schemas/Parties"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SelectedParties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "caseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "partyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "envelopeNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "case": {
+            "$ref": "#/components/schemas/Cases"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SelectedParty": {
+        "type": "object",
+        "properties": {
+          "partyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "partyType": {
+            "type": "string",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServeFilingRequest": {
+        "type": "object",
+        "properties": {
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseType": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseTrackingID": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedCaseCategoryId": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedAttorneySec": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtesyemail": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "nullable": true
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Party"
+            },
+            "nullable": true
+          },
+          "selectedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedParty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServeOnlyCase": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "clientMatterNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "createdByNavigation": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServiceContact": {
+        "type": "object",
+        "properties": {
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "administrativeCopy": {
+            "type": "string",
+            "nullable": true
+          },
+          "addByFirmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serviceContactID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubSequentFeeCalRequest": {
+        "type": "object",
+        "properties": {
+          "selectedCourt": {
+            "type": "string",
+            "nullable": true
+          },
+          "caseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentAccount": {
+            "type": "string",
+            "nullable": true
+          },
+          "selectedAttorneySec": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "courtesyemail": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            },
+            "nullable": true
+          },
+          "parties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Party"
+            },
+            "nullable": true
+          },
+          "selectedParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SelectedParty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateFirm": {
+        "type": "object",
+        "properties": {
+          "firmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePassword": {
+        "type": "object",
+        "properties": {
+          "oldPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateUser": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          },
+          "userID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordEncrypted": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityQuestion": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityAnswer": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActivated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "recieveFilingStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ccEmails": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Case"
+            },
+            "nullable": true
+          },
+          "serveOnlyCases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServeOnlyCase"
+            },
+            "nullable": true
+          },
+          "userAttorneys": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserAttorney"
+            },
+            "nullable": true
+          },
+          "userParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserParty"
+            },
+            "nullable": true
+          },
+          "userPaymentAccounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPaymentAccount"
+            },
+            "nullable": true
+          },
+          "userServiceContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserServiceContact"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserAttorney": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "barId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmID": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeUserLogin": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeServiceContact": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeServiceContactPublic": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "makeFirmAdmin": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "recFilingStatusEmails": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "caseParties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseParty"
+            },
+            "nullable": true
+          },
+          "caseServiceContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseServiceContact"
+            },
+            "nullable": true
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Case"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "passwordEncrypted": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityQuestion": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityAnswer": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActivated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "recieveFilingStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "ccEmails": {
+            "type": "string",
+            "nullable": true
+          },
+          "registrationType": {
+            "type": "string",
+            "nullable": true
+          },
+          "barId": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserParty": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressUnknown": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "internationalAddress": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "caseDocuments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseDocument"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPaymentAccount": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accountNickname": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "cases": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Case"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserServiceContact": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "adminCopyEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "zipCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPublic": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "firm": {
+            "type": "string",
+            "nullable": true
+          },
+          "isFirm": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "caseServiceContacts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CaseServiceContact"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "supportstaff": {
+        "required": [
+          "email",
+          "firstName",
+          "lastName",
+          "userType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "userCreated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "userStatus": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

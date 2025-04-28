@@ -1,0 +1,1930 @@
+[
+  {
+    "ContainingType": "efilling_api.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "efilling_api.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordEncrypted",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SecurityQuestion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SecurityAnswer",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MiddleName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Suffix",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Organization",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "City",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "State",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ZipCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CountryCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirmName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActivated",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecieveFilingStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CcEmails",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cases",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.Case, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServeOnlyCases",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.ServeOnlyCase, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserAttorneys",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.UserAttorney, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserParties",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.UserParty, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserPaymentAccounts",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.UserPaymentAccount, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserServiceContacts",
+        "Type": "System.Collections.Generic.ICollection\u00601[[efilling_api.Models.UserServiceContact, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "efilling_api.Controllers.AuthController\u002BLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "AddUserRole",
+    "RelativePath": "api/Tyler/AddUserRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "AuthenticateUser",
+    "RelativePath": "api/Tyler/AuthenticateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CancelFiling",
+    "RelativePath": "api/Tyler/CancelFiling",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CourtLocation",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilingId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Tyler/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePassword",
+        "Type": "efilling_api.Models.UpdatePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CoreFilingNewCivil",
+    "RelativePath": "api/Tyler/CoreFilingNewCivil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "casedetail",
+        "Type": "efilling_api.Models.FeeCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CoreFilingSubsequentCivil",
+    "RelativePath": "api/Tyler/CoreFilingSubsequentCivil",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subSequentcase",
+        "Type": "efilling_api.Models.SubSequentFeeCalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreateAttorney",
+    "RelativePath": "api/Tyler/CreateAttorney",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attorneyDetails",
+        "Type": "efilling_api.Models.AttorneyDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreateGlobalPaymentAccount",
+    "RelativePath": "api/Tyler/CreateGlobalPaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreatePaymentAccount",
+    "RelativePath": "api/Tyler/CreatePaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentAccount",
+        "Type": "efilling_api.Models.CreatePaymentAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreateReserveFiling",
+    "RelativePath": "api/Tyler/CreateReserveFiling",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "efilling_api.Models.ServeFilingRequest\u002BReservedRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreateServiceContact",
+    "RelativePath": "api/Tyler/CreateServiceContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceContact",
+        "Type": "efilling_api.Models.ServiceContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "CreateSupportStaff",
+    "RelativePath": "api/Tyler/CreateSupportStaff",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "staff",
+        "Type": "efilling_api.Models.supportstaff",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "efilling_api.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Tyler/DeleteUser/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DiscardAllDrafts",
+    "RelativePath": "api/Tyler/DiscardAllDrafts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DiscardDraft",
+    "RelativePath": "api/Tyler/DiscardDraft/{caseId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "caseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCaseCategoryCodes",
+    "RelativePath": "api/Tyler/DownloadCaseCategoryCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CourtCodelistURI",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCaseTypeCodes",
+    "RelativePath": "api/Tyler/DownloadCaseTypeCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCountryCodes",
+    "RelativePath": "api/Tyler/DownloadCountryCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CourtCodelistURI",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtdocumenttype",
+    "RelativePath": "api/Tyler/DownloadCourtdocumenttype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtfilertype",
+    "RelativePath": "api/Tyler/DownloadCourtfilertype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtfiletype",
+    "RelativePath": "api/Tyler/DownloadCourtfiletype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtFilingCodes",
+    "RelativePath": "api/Tyler/DownloadCourtFilingCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtfilingcomponent",
+    "RelativePath": "api/Tyler/DownloadCourtfilingcomponent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtLocations",
+    "RelativePath": "api/Tyler/DownloadCourtLocations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtoptionalservice",
+    "RelativePath": "api/Tyler/DownloadCourtoptionalservice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadCourtpartytype",
+    "RelativePath": "api/Tyler/DownloadCourtpartytype",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "DownloadNameSuffixCodes",
+    "RelativePath": "api/Tyler/DownloadNameSuffixCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingDetails",
+    "RelativePath": "api/Tyler/FilingDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filingDetails",
+        "Type": "efilling_api.Models.FilingDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingService",
+    "RelativePath": "api/Tyler/FilingService",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingStatus",
+    "RelativePath": "api/Tyler/FilingStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filingDetails",
+        "Type": "efilling_api.Models.FilingDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GeSupportStaffList",
+    "RelativePath": "api/Tyler/GeSupportStaffList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[efilling_api.Models.supportstaff, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetAllPartyTypes",
+    "RelativePath": "api/Tyler/GetAllPartyTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetAttorney",
+    "RelativePath": "api/Tyler/GetAttorney",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getAttorney",
+        "Type": "efilling_api.Models.GetAttorney",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetAttorneyList",
+    "RelativePath": "api/Tyler/GetAttorneyList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetAttorneyManage",
+    "RelativePath": "api/Tyler/GetAttorneyManage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getAttorney",
+        "Type": "efilling_api.Models.GetAttorney",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetAttorneyManageUserList",
+    "RelativePath": "api/Tyler/GetAttorneyManageUserList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCase",
+    "RelativePath": "api/Tyler/GetCase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getCase",
+        "Type": "efilling_api.Models.GetCase",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseDetails",
+    "RelativePath": "api/Tyler/GetCaseDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "envelopeID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "efilling_api.Models.InitialCaseDetails\u002BCases",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseDraftDetails",
+    "RelativePath": "api/Tyler/GetCaseDraftDetails/{caseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "caseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "efilling_api.Models.InitialCaseDetails\u002BCases",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseList",
+    "RelativePath": "api/Tyler/GetCaseList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "caseRequest",
+        "Type": "efilling_api.Models.CaseRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseTest",
+    "RelativePath": "api/Tyler/GetCaseTest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CaseTrackingID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseType",
+    "RelativePath": "api/Tyler/GetCaseType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCaseUserList",
+    "RelativePath": "api/Tyler/GetCaseUserList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[efilling_api.Models.InitialCaseDetails\u002BCases, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCategotyType",
+    "RelativePath": "api/Tyler/GetCategoty",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCourtLocations",
+    "RelativePath": "api/Tyler/GetCourtLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCourtName",
+    "RelativePath": "api/Tyler/GetCourtName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCourtNameSuffixCode",
+    "RelativePath": "api/Tyler/GetCourtNameSuffixCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetCourtoptionalservices",
+    "RelativePath": "api/Tyler/GetCourtOptionalServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filingcode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetDocument",
+    "RelativePath": "api/Tyler/GetDocument",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CaseTrackingID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CaseDocketID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetDocumentCode",
+    "RelativePath": "api/Tyler/GetDocumentCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filingcode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetDraftCases",
+    "RelativePath": "api/Tyler/GetDraftCases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[efilling_api.Models.InitialCaseDetails\u002BCases, efilling_api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetDraftsCount",
+    "RelativePath": "api/Tyler/GetDraftsCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFeesCalculation",
+    "RelativePath": "api/Tyler/GetFeesCalculation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "calculationRequest",
+        "Type": "efilling_api.Models.FeesCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingCode",
+    "RelativePath": "api/Tyler/GetFilingCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoryId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingList",
+    "RelativePath": "api/Tyler/GetFilingList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "listRequest",
+        "Type": "efilling_api.Models.FilingListRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFilingListAll",
+    "RelativePath": "api/Tyler/GetFilingListAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetFirm",
+    "RelativePath": "api/Tyler/GetFirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetNotificationPreferencesList",
+    "RelativePath": "api/Tyler/GetNotificationPreferencesList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetOptionalServices",
+    "RelativePath": "api/Tyler/GetOptionalServices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPartyTypeCode",
+    "RelativePath": "api/Tyler/GetPartyTypeCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "caseTypeId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPaymentAccount",
+    "RelativePath": "api/Tyler/GetPaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentAccount",
+        "Type": "efilling_api.Models.PaymentAccountRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPaymentAccountList",
+    "RelativePath": "api/Tyler/GetPaymentAccountList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPaymentAccountTypeList",
+    "RelativePath": "api/Tyler/GetPaymentAccountTypeList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPolicy",
+    "RelativePath": "api/Tyler/GetPolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Courtlocation",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetPublicList",
+    "RelativePath": "api/Tyler/GetPublicList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirmName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceContact",
+    "RelativePath": "api/Tyler/GetServiceContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ServiceContactID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceContactList",
+    "RelativePath": "api/Tyler/GetServiceContactList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceInformation",
+    "RelativePath": "api/Tyler/GetServiceInformation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetSubSequentFeesCalculation",
+    "RelativePath": "api/Tyler/GetSubSequentFeesCalculation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subseqcalRequest",
+        "Type": "efilling_api.Models.SubSequentFeeCalRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetSupportStaffById",
+    "RelativePath": "api/Tyler/GetSupportStaffById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "efilling_api.Models.supportstaff",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetUserList",
+    "RelativePath": "api/Tyler/GetUserList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetUserRequest",
+    "RelativePath": "api/Tyler/GetUserRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetGlobalPaymentAccount",
+    "RelativePath": "api/Tyler/GlobalPaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetGlobalPaymentAccountList",
+    "RelativePath": "api/Tyler/GlobalPaymentAccountList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetNotificationPreferences",
+    "RelativePath": "api/Tyler/NotificationPreferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "NotifyCaseAssignmentComplete",
+    "RelativePath": "api/Tyler/NotifyCaseAssignmentComplete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RegisterFirm",
+    "RelativePath": "api/Tyler/RegisterFirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Tyler/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "efilling_api.Models.UserInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RemoveAttorney",
+    "RelativePath": "api/Tyler/RemoveAttorney",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AttorneyID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RemoveGlobalPaymentAccount",
+    "RelativePath": "api/Tyler/RemoveGlobalPaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RemovePaymentAccount",
+    "RelativePath": "api/Tyler/RemovePaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PaymentAccountID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RemoveServiceContact",
+    "RelativePath": "api/Tyler/RemoveServiceContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ServiceContactID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "RemoveUser",
+    "RelativePath": "api/Tyler/RemoveUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "ReviewFiling",
+    "RelativePath": "api/Tyler/ReviewFiling",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "casedetail",
+        "Type": "efilling_api.Models.FeeCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "SaveMatchingFiling",
+    "RelativePath": "api/Tyler/save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "efilling_api.Models.MatchingFilingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "SaveDraft",
+    "RelativePath": "api/Tyler/savedraft",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "efilling_api.Models.FeeCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "SaveDraftInitial",
+    "RelativePath": "api/Tyler/SaveDraftInitial",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "efilling_api.Models.FeeCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "SecureCase",
+    "RelativePath": "api/Tyler/SecureCase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "SelfResendActivationEmail",
+    "RelativePath": "api/Tyler/SelfResendActivationEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "ServeFilingForExistingCase",
+    "RelativePath": "api/Tyler/ServeFiling",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "casedetail",
+        "Type": "efilling_api.Models.ServeFilingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceAttachCaseList",
+    "RelativePath": "api/Tyler/ServiceAttachCaseList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceInformationHistory",
+    "RelativePath": "api/Tyler/ServiceInformationHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "GetServiceTypes",
+    "RelativePath": "api/Tyler/ServiceTypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateAttorney",
+    "RelativePath": "api/Tyler/UpdateAttorney",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateAttorney",
+        "Type": "efilling_api.Models.AttorneyDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateFirm",
+    "RelativePath": "api/Tyler/UpdateFirm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateFirm",
+        "Type": "efilling_api.Models.UpdateFirm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateNotificationPreferences",
+    "RelativePath": "api/Tyler/UpdateNotificationPreferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdatePaymentAccount",
+    "RelativePath": "api/Tyler/UpdatePaymentAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentAccount",
+        "Type": "efilling_api.Models.PaymentAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateServiceContact",
+    "RelativePath": "api/Tyler/UpdateServiceContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serviceContact",
+        "Type": "efilling_api.Models.ServiceContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateSupportStaff",
+    "RelativePath": "api/Tyler/UpdateSupportStaff/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "staff",
+        "Type": "efilling_api.Models.supportstaff",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Tyler/UpdateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateUser",
+        "Type": "efilling_api.Models.UpdateUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "efilling_api.Controllers.TylerController",
+    "Method": "UpdateUserUserService",
+    "RelativePath": "api/Tyler/UpdateUserUserService",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MiddleName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

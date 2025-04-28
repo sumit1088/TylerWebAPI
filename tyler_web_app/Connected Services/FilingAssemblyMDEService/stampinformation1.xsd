@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.1/" xmlns:stampinformation="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/stampinformation" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/stampinformation" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/stampinformation" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="niem\domains\jxdm\6.1\jxdm.xsd" namespace="http://release.niem.gov/niem/domains/jxdm/6.1/" />
+  <xs:import schemaLocation="niem\niem-core\4.0\niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/stampinformation</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="DocumentStampInformationMessageType">
+    <xs:annotation>
+      <xs:documentation>A request to get document stamping information.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:CaseFilingType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ecf:CaseTrackingID" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="j:CaseNumberText" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="nc:Case" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="stampinformation:DocumentStampInformationMessageAugmentationPoint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentStampInformationMessage" type="stampinformation:DocumentStampInformationMessageType">
+    <xs:annotation>
+      <xs:documentation>A request to get document stamping information.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="DocumentStampInformationMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

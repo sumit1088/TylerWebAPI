@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xcal="urn:ietf:params:xml:ns:icalendar-2.0" elementFormDefault="qualified" targetNamespace="urn:ietf:params:xml:ns:icalendar-2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="iCalendar-valtypes.xsd" />
+  <xs:include schemaLocation="iCalendar-props.xsd" />
+  <xs:element name="x-bedework-uid" substitutionGroup="xcal:baseParameter" type="xcal:XBedeworkUidParamType" />
+  <xs:complexType name="XBedeworkUidParamType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="xcal:TextParameterType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="x-bedework-cost" substitutionGroup="xcal:baseProperty" type="xcal:XBedeworkCostPropType" />
+  <xs:element name="x-bedework-exsynch-endtzid" substitutionGroup="xcal:baseProperty" type="xcal:XBedeworkExsynchEndtzidPropType" />
+  <xs:element name="x-bedework-exsynch-lastmod" substitutionGroup="xcal:baseProperty" type="xcal:XBedeworkExsynchLastmodPropType" />
+  <xs:element name="x-bedework-exsynch-organizer" substitutionGroup="xcal:baseProperty" type="xcal:OrganizerPropType" />
+  <xs:element name="x-bedework-exsynch-starttzid" substitutionGroup="xcal:baseProperty" type="xcal:XBedeworkExsynchStarttzidPropType" />
+  <xs:complexType name="XBedeworkCostPropType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="xcal:TextPropertyType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="XBedeworkExsynchEndtzidPropType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="xcal:TextPropertyType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="XBedeworkExsynchLastmodPropType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="xcal:TextPropertyType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="XBedeworkExsynchStarttzidPropType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="xcal:TextPropertyType" />
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

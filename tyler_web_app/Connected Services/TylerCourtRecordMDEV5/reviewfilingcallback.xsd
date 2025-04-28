@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns:reviewfilingcallback="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/reviewfilingcallback" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/reviewfilingcallback" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/reviewfilingcallback" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/reviewfilingcallback</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="NotifyFilingReviewCompleteMessageType">
+    <xs:annotation>
+      <xs:documentation>The asynchronous message from the Filing Review MDE to the Filing Assembly MDE conveying information concerning the court actions on the documents submitted for filing in a ReviewFilingMessage.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:CallbackMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="reviewfilingcallback:NotifyFilingReviewCompleteMessageAugmentationPoint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NotifyFilingReviewCompleteMessage" type="reviewfilingcallback:NotifyFilingReviewCompleteMessageType">
+    <xs:annotation>
+      <xs:documentation>The asynchronous message from the Filing Review MDE to the Filing Assembly MDE conveying information concerning the court actions on the documents submitted for filing in a ReviewFilingMessage.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="NotifyFilingReviewCompleteMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

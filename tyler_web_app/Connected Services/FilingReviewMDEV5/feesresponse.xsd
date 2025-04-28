@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/feesresponse" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns:feesresponse="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/feesresponse" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/feesresponse" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/UBL-CommonAggregateComponents-2.2.xsd" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" />
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="niem\niem-core\4.0\niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/feesresponse</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="GetFeesCalculationResponseMessageType">
+    <xs:annotation>
+      <xs:documentation>The response to a CalculatedFeesQueryMessage, which may either be 0 indicating no fee is due, a currency amount indicating the fee due upon filing, or unknown indicating that the court case management information system is unable to calculate the fee for the proposed filing.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:ResponseMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="cac:AllowanceCharge" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="feesresponse:FeesCalculationAmount" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="feesresponse:GetFeesCalculationResponseMessageAugmentationPoint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FeesCalculationAmount" type="nc:AmountType">
+    <xs:annotation>
+      <xs:documentation>A total of all fees required to submit a document.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="GetFeesCalculationResponseMessage" type="feesresponse:GetFeesCalculationResponseMessageType">
+    <xs:annotation>
+      <xs:documentation>The response to a CalculatedFeesQueryMessage, which may either be 0 indicating no fee is due, a currency amount indicating the fee due upon filing, or unknown indicating that the court case management information system is unable to calculate the fee for the proposed filing.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="GetFeesCalculationResponseMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

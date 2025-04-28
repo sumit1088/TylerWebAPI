@@ -1,0 +1,144 @@
+﻿@model IEnumerable<tyler_web_app.Models.Case>
+
+@{
+    ViewBag.Title = "Standings";
+}
+
+@*@foreach (var item in Model)
+    {
+        <div>
+            @item.CaseAugmentation.CaseCourt.OrganizationIdentification.IdentificationID.Value
+            <hr />
+        </div>
+    }*@
+
+<div id="myDiv">
+    <div class="container white-bg" id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-md-12">
+                                <h3 class="text-left  clearfix">
+                                    <label class="pull-left" for="My_Uploads">Case List Details</label>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-wrap">                       
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive" style="min-height:.01%;overflow-x:hidden;">
+                                    <table id="casedetails" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        @*<thead>                                           
+                                            <tr>
+                                                <th> Case Court </th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <th> Case Court (San Luis Obispo) </th>
+                                                <td>
+                                                    @item.CaseAugmentation.CaseCourt.OrganizationIdentification.IdentificationID.Value
+                                                </td>
+                                            </tr>
+                                            }
+                                        </tbody>
+                                        @*<thead>                                           
+                                            <tr>
+                                                <th>Case Type Text</th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <th>Case Type Text</th>
+                                                    <td>
+                                                        @item.CaseAugmentation1.CaseTypeText.Value
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                        @*<thead>
+                                            <tr>
+                                                <th>Case Title Text</th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <th>Case Title Text</th>
+                                                <td>
+                                                    @item.CaseTitleText.Value
+                                                </td>
+
+                                            </tr>
+                                            }
+                                        </tbody>
+                                        @*<thead>
+                                            <tr>
+                                                <th>Case Category Text</th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <th>Case Category Text</th>
+                                                <td>
+                                                    @item.CaseCategoryText.Value
+                                                </td>
+
+                                            </tr>
+                                            }
+                                        </tbody>
+                                        @*<thead>
+                                            <tr>
+                                                <th>Case Tracking ID</th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <th>Case Tracking ID</th>
+                                                <td>
+                                                    @item.CaseTrackingID.Value
+                                                    <button type="button" onclick="window.location.href = 'https://localhost:44392/Home/GetCaseDemo?id=@item.CaseTrackingID.Value';">   Get Case</button>
+                                                </td>
+
+                                            </tr>
+                                            }
+                                        </tbody>
+                                        @*<thead>
+                                            <tr>
+                                                <th>Case Docket ID</th>
+                                            </tr>
+                                        </thead>*@
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                            <tr>
+                                                <th>Case Docket ID</th>
+                                                <td>
+                                                    @item.CaseDocketID.Value
+                                                </td>
+
+                                            </tr>
+                                            }
+                                        </tbody>                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

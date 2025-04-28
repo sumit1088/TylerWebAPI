@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\efilling_api.props" />
+</Project>

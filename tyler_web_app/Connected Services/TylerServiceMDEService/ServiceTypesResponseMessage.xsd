@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:jxdm="http://niem.gov/niem/domains/jxdm/4.0" xmlns:ecf="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CommonTypes-4.0" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns="urn:tyler:ecf:extensions:ServiceTypesResponseMessage" xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" targetNamespace="urn:tyler:ecf:extensions:ServiceTypesResponseMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="../constraint/niem/niem-core/2.0/niem-core.xsd" namespace="http://niem.gov/niem/niem-core/2.0" />
+  <xs:import schemaLocation="../constraint/niem/domains/jxdm/4.0/jxdm.xsd" namespace="http://niem.gov/niem/domains/jxdm/4.0" />
+  <xs:import schemaLocation="../common/ECF-4.0-CommonTypes.xsd" namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CommonTypes-4.0" />
+  <xs:import schemaLocation="../constraint/niem/proxy/xsd/2.0/xsd.xsd" namespace="http://niem.gov/niem/proxy/xsd/2.0" />
+  <xs:complexType name="ServiceTypesResponseMessageType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:QueryResponseMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ServiceType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ServiceTypeType">
+    <xs:sequence>
+      <xs:element ref="ServiceCodeID" />
+      <xs:element ref="Description" />
+      <xs:element ref="IsEmailRequired" />
+      <xs:element ref="IsStreetAddressRequired" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceType" type="ServiceTypeType" />
+  <xs:element name="ServiceTypesResponseMessage" type="ServiceTypesResponseMessageType" />
+  <xs:element name="ServiceCodeID" type="nc:TextType" />
+  <xs:element name="Description" type="nc:TextType" />
+  <xs:element name="IsEmailRequired" type="niem-xsd:boolean" />
+  <xs:element name="IsStreetAddressRequired" type="niem-xsd:boolean" />
+</xs:schema>

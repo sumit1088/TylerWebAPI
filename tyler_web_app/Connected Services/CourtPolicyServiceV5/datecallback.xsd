@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:xcal="urn:ietf:params:xml:ns:icalendar-2.0" xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns:datecallback="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/datecallback" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/datecallback" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/datecallback" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="niem\niem-core\4.0\niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:import schemaLocation="ws-calendar/iCalendar.xsd" namespace="urn:ietf:params:xml:ns:icalendar-2.0" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/datecallback</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="NotifyCourtDateMessageType">
+    <xs:annotation>
+      <xs:documentation>The message returned when the a court date is scheduled, generally in response to a ReserveCourtDateRequest.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:CaseFilingType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="datecallback:NotifyCourtDateMessageAugmentationPoint" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="nc:Case" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="xcal:icalendar" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NotifyCourtDateMessage" type="datecallback:NotifyCourtDateMessageType">
+    <xs:annotation>
+      <xs:documentation>The message returned when the a court date is scheduled, generally in response to a ReserveCourtDateRequest.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="NotifyCourtDateMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

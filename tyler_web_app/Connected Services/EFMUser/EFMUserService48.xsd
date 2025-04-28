@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:tyler:efm:services:schema:UpdatePaymentAccountResponse" elementFormDefault="qualified" targetNamespace="urn:tyler:efm:services:schema:UpdatePaymentAccountResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://california-efm-stage.tylertech.cloud/EFM/EFMUserService.svc?xsd=xsd32" namespace="urn:tyler:efm:services:schema:BaseResponse" />
+  <xs:import schemaLocation="https://california-efm-stage.tylertech.cloud/EFM/EFMUserService.svc?xsd=xsd5" namespace="urn:tyler:efm:services:schema:Common" />
+  <xs:complexType name="UpdatePaymentAccountResponseType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="urn:tyler:efm:services:schema:BaseResponse" base="q1:BaseResponseType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="PaymentAccountID" type="xs:string" />
+          <xs:element xmlns:q2="urn:tyler:efm:services:schema:Common" minOccurs="0" maxOccurs="1" ref="q2:PaymentAccountLocationDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

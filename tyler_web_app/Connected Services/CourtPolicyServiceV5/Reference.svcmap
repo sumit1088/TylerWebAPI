@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="fe154ffe-c993-4a97-bf34-9a7dc6ff99a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/wsi/schema/CourtPolicyMDE.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="cbrncl.xsd" MetadataType="Schema" ID="72a349cb-861e-401e-a9af-1c6ee4711a72" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/cbrncl/4.0/cbrncl.xsd" />
+    <MetadataFile FileName="requestdateresponse.xsd" MetadataType="Schema" ID="932622a1-8ef1-467a-893e-bf65ffe053c0" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/requestdateresponse.xsd" />
+    <MetadataFile FileName="caselistrequest.xsd" MetadataType="Schema" ID="03eefef2-0e24-4132-ae96-afcf50f73504" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/caselistrequest.xsd" />
+    <MetadataFile FileName="filingstatusrequest.xsd" MetadataType="Schema" ID="05b2fd48-8d31-441f-84cc-0b0dac4eaa83" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/filingstatusrequest.xsd" />
+    <MetadataFile FileName="schedulerequest.xsd" MetadataType="Schema" ID="964cdc9e-0dd3-48c4-b860-ebf29077be91" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/schedulerequest.xsd" />
+    <MetadataFile FileName="policyrequest.xsd" MetadataType="Schema" ID="75f43479-e141-4f52-b776-68fc172201c9" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/policyrequest.xsd" />
+    <MetadataFile FileName="fbi_ucr.xsd" MetadataType="Schema" ID="1ee67dc2-df19-45a6-a52e-b532cf63221f" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/fbi_ucr/4.1/fbi_ucr.xsd" />
+    <MetadataFile FileName="ecf.xsd" MetadataType="Schema" ID="2e24dc35-ea39-469e-95a4-5715ae67905a" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ecf.xsd" />
+    <MetadataFile FileName="filing.xsd" MetadataType="Schema" ID="91584d1a-009c-4827-b149-41c27c581291" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/filing.xsd" />
+    <MetadataFile FileName="wrappers.xsd" MetadataType="Schema" ID="da2c9332-17b3-4f87-a809-962a0b585892" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/wrappers.xsd" />
+    <MetadataFile FileName="UBL-CommonAggregateComponents-2.xsd" MetadataType="Schema" ID="bb4da667-0dec-45ae-87e7-0bc81fb4fce5" SourceId="1" SourceUrl="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/UBL-CommonAggregateComponents-2.2.xsd" />
+    <MetadataFile FileName="caseresponse.xsd" MetadataType="Schema" ID="b942aa85-ded8-40a9-b05b-f772da27eda3" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/caseresponse.xsd" />
+    <MetadataFile FileName="stampinformation.xsd" MetadataType="Schema" ID="e079f857-d787-4f8b-96a8-1803f051a0e7" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/stampinformation.xsd" />
+    <MetadataFile FileName="niem-core.xsd" MetadataType="Schema" ID="73e7873e-8f3f-4c55-b060-82629a5337f0" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/niem-core/4.0/niem-core.xsd" />
+    <MetadataFile FileName="UBL-QualifiedDataTypes-2.xsd" MetadataType="Schema" ID="e62de078-1971-4e70-b9c6-f88af5a74f4f" SourceId="1" SourceUrl="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/UBL-QualifiedDataTypes-2.2.xsd" />
+    <MetadataFile FileName="iso_639-3.xsd" MetadataType="Schema" ID="b1da6d06-78b4-4df3-a90b-2fbcac0ec6d9" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/iso_639-3/4.0/iso_639-3.xsd" />
+    <MetadataFile FileName="UBL-CommonBasicComponents-2.xsd" MetadataType="Schema" ID="d902af62-ec73-47a6-90ba-577fdcafc1bf" SourceId="1" SourceUrl="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/UBL-CommonBasicComponents-2.2.xsd" />
+    <MetadataFile FileName="stampinformationcallback.xsd" MetadataType="Schema" ID="8a1fe366-1d45-42f8-bc95-bc1ada04c578" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/stampinformationcallback.xsd" />
+    <MetadataFile FileName="iso_4217.xsd" MetadataType="Schema" ID="c517592c-0292-44be-b643-9bcc324b0a9b" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/iso_4217/4.0/iso_4217.xsd" />
+    <MetadataFile FileName="CCTS_CCT_SchemaModule-2.xsd" MetadataType="Schema" ID="22f348d4-d12f-4a02-81ed-3521c7e7b320" SourceId="1" SourceUrl="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/CCTS_CCT_SchemaModule-2.2.xsd" />
+    <MetadataFile FileName="UBL-UnqualifiedDataTypes-2.xsd" MetadataType="Schema" ID="dac1a142-4759-4473-a77d-f210978b08b2" SourceId="1" SourceUrl="http://docs.oasis-open.org/ubl/os-UBL-2.2/xsd/common/UBL-UnqualifiedDataTypes-2.2.xsd" />
+    <MetadataFile FileName="aamva_d20.xsd" MetadataType="Schema" ID="3b6e2379-e6b9-4c32-8519-5cfc5cc871d1" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/aamva_d20/4.0/aamva_d20.xsd" />
+    <MetadataFile FileName="structures.xsd" MetadataType="Schema" ID="16aafbcd-0c72-4514-a03b-a46323c5106b" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/utility/structures/4.0/structures.xsd" />
+    <MetadataFile FileName="reviewfilingcallback.xsd" MetadataType="Schema" ID="daee500b-a12d-4a10-9f18-a82505dad967" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/reviewfilingcallback.xsd" />
+    <MetadataFile FileName="usps_states.xsd" MetadataType="Schema" ID="5749dd7e-a2cc-4a5d-9f8e-99beaf381df7" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/usps_states/4.0/usps_states.xsd" />
+    <MetadataFile FileName="iCalendar-link-extension.xsd" MetadataType="Schema" ID="a2b8dd4f-20a3-4a19-bb95-49dba81d2406" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-link-extension.xsd" />
+    <MetadataFile FileName="allocatedate.xsd" MetadataType="Schema" ID="219d6541-06f2-4ea0-847b-85286345442d" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/allocatedate.xsd" />
+    <MetadataFile FileName="requestdaterequest.xsd" MetadataType="Schema" ID="003733b5-fa33-4974-8c71-3e93544b0dca" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/requestdaterequest.xsd" />
+    <MetadataFile FileName="iCalendar-bw-extensions.xsd" MetadataType="Schema" ID="95e5f5c4-48f8-49ea-8c7d-0c12c2d57b34" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-bw-extensions.xsd" />
+    <MetadataFile FileName="unece_rec20-misc.xsd" MetadataType="Schema" ID="0e1ae8ae-cde9-4d92-af39-8223c20fb931" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/unece_rec20/4.0/unece_rec20-misc.xsd" />
+    <MetadataFile FileName="iCalendar-wscal-extensions.xsd" MetadataType="Schema" ID="f4ea0da9-20c0-4c71-afed-2eabab494e5a" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-wscal-extensions.xsd" />
+    <MetadataFile FileName="serviceinformationresponse.xsd" MetadataType="Schema" ID="f9becc16-bb9d-4726-8cdb-6045697285fa" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/serviceinformationresponse.xsd" />
+    <MetadataFile FileName="cancel.xsd" MetadataType="Schema" ID="499a211f-06bb-4796-afad-660adfcdaf67" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/cancel.xsd" />
+    <MetadataFile FileName="documentrequest.xsd" MetadataType="Schema" ID="7dcf27eb-a810-46e6-85e0-0ad7cdec05c7" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/documentrequest.xsd" />
+    <MetadataFile FileName="cbrn.xsd" MetadataType="Schema" ID="1d5a820a-2aa6-4843-97a5-eca2c529e76f" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/domains/cbrn/4.1/cbrn.xsd" />
+    <MetadataFile FileName="iCalendar-valtypes.xsd" MetadataType="Schema" ID="ab378f6d-e04b-4bc0-afb8-b1bfbb22fc26" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-valtypes.xsd" />
+    <MetadataFile FileName="filinglistresponse.xsd" MetadataType="Schema" ID="edfa7e96-2682-4ba7-bac3-303a09b0affb" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/filinglistresponse.xsd" />
+    <MetadataFile FileName="iCalendar.xsd" MetadataType="Schema" ID="0d00c3c1-e055-4016-9f27-36b7fa146788" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar.xsd" />
+    <MetadataFile FileName="CourtPolicyMDE.wsdl" MetadataType="Wsdl" ID="c0b26c99-3d4a-47b5-b99e-7aab88692e66" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/wsi/schema/CourtPolicyMDE.wsdl" />
+    <MetadataFile FileName="payment.xsd" MetadataType="Schema" ID="b21aeb49-e639-4a75-b62c-0c81e7387b99" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/payment.xsd" />
+    <MetadataFile FileName="scheduleresponse.xsd" MetadataType="Schema" ID="db8639a3-79c2-4599-8643-ef33ffe6ef6c" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/scheduleresponse.xsd" />
+    <MetadataFile FileName="fbi_ncic.xsd" MetadataType="Schema" ID="b3e83b99-5e39-440c-a51a-fb81472ef8cf" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/fbi_ncic/4.0/fbi_ncic.xsd" />
+    <MetadataFile FileName="iCalendar-params.xsd" MetadataType="Schema" ID="219325f6-d2f4-4516-ac69-d908e31cd76f" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-params.xsd" />
+    <MetadataFile FileName="xs.xsd" MetadataType="Schema" ID="bd9b1c13-5c1c-405d-8855-fa367cb6c23c" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/proxy/xsd/4.0/xs.xsd" />
+    <MetadataFile FileName="jxdm.xsd" MetadataType="Schema" ID="caf1c4d0-aab2-486e-b0eb-8e4b6f2dd5ab" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/domains/jxdm/6.1/jxdm.xsd" />
+    <MetadataFile FileName="iCalendar-availability-extension.xsd" MetadataType="Schema" ID="2e52d0f7-a4db-4b1e-901b-b5f6300e746f" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-availability-extension.xsd" />
+    <MetadataFile FileName="docket.xsd" MetadataType="Schema" ID="a890dd6f-7efd-4a0a-bec7-91cdb4d52c53" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/docket.xsd" />
+    <MetadataFile FileName="feesresponse.xsd" MetadataType="Schema" ID="a9224223-a326-4b8a-87ae-ca5006d3f8ce" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/feesresponse.xsd" />
+    <MetadataFile FileName="datecallback.xsd" MetadataType="Schema" ID="8d584202-03a5-4886-a0f1-dba372b09a39" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/datecallback.xsd" />
+    <MetadataFile FileName="filinglistrequest.xsd" MetadataType="Schema" ID="fe9909ed-d804-4019-88c7-dac6a25f56af" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/filinglistrequest.xsd" />
+    <MetadataFile FileName="caserequest.xsd" MetadataType="Schema" ID="00e2abba-502f-467b-9d39-82bf45cabe6b" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/caserequest.xsd" />
+    <MetadataFile FileName="serviceinformationrequest.xsd" MetadataType="Schema" ID="eccb1cb4-9f46-448e-9fe5-6230ef5daef4" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/serviceinformationrequest.xsd" />
+    <MetadataFile FileName="policyresponse.xsd" MetadataType="Schema" ID="5a9a5cdf-a242-4a5d-9ccf-28ff7fc97d03" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/policyresponse.xsd" />
+    <MetadataFile FileName="filingstatusresponse.xsd" MetadataType="Schema" ID="2de1ea6c-480e-40ba-a577-3feeac9d0e93" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/filingstatusresponse.xsd" />
+    <MetadataFile FileName="documentresponse.xsd" MetadataType="Schema" ID="0ece70a8-ae07-49d9-8dec-bbcc660a467b" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/documentresponse.xsd" />
+    <MetadataFile FileName="reservedate.xsd" MetadataType="Schema" ID="03753e2d-371f-4dbe-b6f2-1194afa998e8" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/reservedate.xsd" />
+    <MetadataFile FileName="iCalendar-ms-extensions.xsd" MetadataType="Schema" ID="ed1b4696-5aaa-4ed4-938d-1015c299b373" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-ms-extensions.xsd" />
+    <MetadataFile FileName="iso_3166.xsd" MetadataType="Schema" ID="43ad9083-1962-417f-8626-7e56efb63ac2" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/iso_3166-1/4.0/iso_3166.xsd" />
+    <MetadataFile FileName="docketcallback.xsd" MetadataType="Schema" ID="206dda02-1d2f-4a94-ae5d-77bef2439c21" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/docketcallback.xsd" />
+    <MetadataFile FileName="iCalendar-props.xsd" MetadataType="Schema" ID="27184c60-4e68-4dae-a8e2-011bcd2e1e35" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/ws-calendar/iCalendar-props.xsd" />
+    <MetadataFile FileName="feesrequest.xsd" MetadataType="Schema" ID="3095f374-d2f9-4bd7-a451-159f86d7229f" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/feesrequest.xsd" />
+    <MetadataFile FileName="mmucc.xsd" MetadataType="Schema" ID="fba3dea6-ded1-4d91-a4e2-4182ecb3fb6d" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/codes/mmucc/4.1/mmucc.xsd" />
+    <MetadataFile FileName="caselistresponse.xsd" MetadataType="Schema" ID="36e6cbb8-5f5b-4514-b406-6b56a8d6acfa" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/caselistresponse.xsd" />
+    <MetadataFile FileName="xmldsig-core-schema.xsd" MetadataType="Schema" ID="db43d918-0f4e-443a-b857-b5eae4df0615" SourceId="1" SourceUrl="http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd" />
+    <MetadataFile FileName="biom.xsd" MetadataType="Schema" ID="604a830c-9e0a-447d-bfb3-25892d4603c6" SourceId="1" SourceUrl="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/schema/niem/domains/biometrics/4.1/biom.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

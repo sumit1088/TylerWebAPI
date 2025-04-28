@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://california-efm-stage.tylertech.cloud/EFM/Schema/ecf5.0/wsi/schema/CourtRecordMDE.wsdl" docRef="https://california-efm-stage.tylertech.cloud/EFM/v5/CourtRecordService.svc" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+</discovery>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EpEuxM8OjW80z3G7UOWwZbIbJ32KkvZvjrdzptv9L+U=",
+  "Source": "efilling_api",
+  "BasePath": "_content/efilling_api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:j="http://release.niem.gov/niem/domains/jxdm/6.1/" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:schedulerequest="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/schedulerequest" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/schedulerequest" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/schedulerequest" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="niem\domains\jxdm\6.1\jxdm.xsd" namespace="http://release.niem.gov/niem/domains/jxdm/6.1/" />
+  <xs:import schemaLocation="niem\niem-core\4.0\niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/schedulerequest</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="GetCourtScheduleRequestMessageType">
+    <xs:annotation>
+      <xs:documentation>A request for the schedule of upcoming events in a court</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:RequestMessageType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="schedulerequest:GetCourtScheduleRequestMessageAugmentationPoint" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="schedulerequest:ScheduleQueryCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ScheduleQueryCriteriaType">
+    <xs:annotation>
+      <xs:documentation>Criteria limiting the schedule information to be returned.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="structures:ObjectType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" ref="ecf:CaseTypeCode" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="ecf:CourtEventTypeCode" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="j:CourtAdministrativeUnitText" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="j:Judge" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="nc:DateRange" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetCourtScheduleRequestMessage" type="schedulerequest:GetCourtScheduleRequestMessageType">
+    <xs:annotation>
+      <xs:documentation>A request for the schedule of upcoming events in a court</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="GetCourtScheduleRequestMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ScheduleQueryCriteria" type="schedulerequest:ScheduleQueryCriteriaType">
+    <xs:annotation>
+      <xs:documentation>Criteria limiting the schedule information to be returned.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

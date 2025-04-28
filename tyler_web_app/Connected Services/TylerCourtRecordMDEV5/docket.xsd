@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:clsa="http://reference.niem.gov/niem/specification/code-lists/1.0/code-lists-schema-appinfo/" xmlns:ecf="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" xmlns:niem-xs="http://release.niem.gov/niem/proxy/xsd/4.0/" xmlns:term="http://release.niem.gov/niem/localTerminology/3.0/" xmlns:filing="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/filing" xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:docket="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/docket" xmlns:nc="http://release.niem.gov/niem/niem-core/4.0/" xmlns:structures="http://release.niem.gov/niem/structures/4.0/" xmlns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/docket" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/docket" version="5.0" ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ExtensionSchemaDocument http://reference.niem.gov/niem/specification/code-lists/1.0/#SchemaDocument" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ecf.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/ecf" />
+  <xs:import schemaLocation="filing.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/filing" />
+  <xs:import schemaLocation="niem\niem-core\4.0\niem-core.xsd" namespace="http://release.niem.gov/niem/niem-core/4.0/" />
+  <xs:import schemaLocation="niem\proxy\xsd\4.0\xs.xsd" namespace="http://release.niem.gov/niem/proxy/xsd/4.0/" />
+  <xs:import schemaLocation="niem\utility\structures\4.0\structures.xsd" namespace="http://release.niem.gov/niem/structures/4.0/" />
+  <xs:annotation>
+    <xs:documentation> Schema for namespace https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/docket</xs:documentation>
+  </xs:annotation>
+  <xs:complexType name="RecordDocketingMessageType">
+    <xs:annotation>
+      <xs:documentation>Message resulting from clerk review and edit of a ReviewFilingMessage.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="ecf:CaseFilingType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" ref="docket:CorrectedCase" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="docket:FilingReviewCommentsText" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="docket:RecordDocketingMessageAugmentationPoint" />
+          <xs:element minOccurs="0" maxOccurs="1" ref="docket:SealCaseIndicator" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ecf:ConnectedDocumentReview" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" ref="ecf:LeadDocumentReview" />
+          <xs:element minOccurs="1" maxOccurs="1" ref="filing:FilingMessage" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CorrectedCase" type="nc:CaseType">
+    <xs:annotation>
+      <xs:documentation>The court case in which the filing is being docketed.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="FilingReviewCommentsText" type="nc:TextType">
+    <xs:annotation>
+      <xs:documentation>Comments provided by the clerk to the court record system during review.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="RecordDocketingMessage" type="docket:RecordDocketingMessageType">
+    <xs:annotation>
+      <xs:documentation>Message resulting from clerk review and edit of a ReviewFilingMessage.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element abstract="true" name="RecordDocketingMessageAugmentationPoint">
+    <xs:annotation>
+      <xs:documentation>An extension point for the enclosing message.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="SealCaseIndicator" type="niem-xs:boolean">
+    <xs:annotation>
+      <xs:documentation>Instruction from the clerk to the court record to represent this case as "sealed."</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+</xs:schema>

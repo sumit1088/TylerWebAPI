@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE" xmlns:wrappers="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/wrappers" xmlns:wsrmp="http://docs.oasis-open.org/ws-rx/wsrmp/200702" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="MyPolicy">
+    <wsrmp:RMAssertion />
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="..\..\schema\wrappers.xsd" namespace="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0/wrappers" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelFilingRequest">
+    <wsdl:part name="body" element="wrappers:CancelFilingRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelFilingResponse">
+    <wsdl:part name="body" element="wrappers:CancelFilingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFeesCalculationRequest">
+    <wsdl:part name="body" element="wrappers:GetFeesCalculationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetFeesCalculationResponse">
+    <wsdl:part name="body" element="wrappers:GetFeesCalculationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilingListRequest">
+    <wsdl:part name="body" element="wrappers:GetFilingListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetFilingListResponse">
+    <wsdl:part name="body" element="wrappers:GetFilingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilingStatusRequest">
+    <wsdl:part name="body" element="wrappers:GetFilingStatusRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetFilingStatusResponse">
+    <wsdl:part name="body" element="wrappers:GetFilingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyDocketingCompleteRequest">
+    <wsdl:part name="body" element="wrappers:NotifyDocketingCompleteRequest" />
+  </wsdl:message>
+  <wsdl:message name="NotifyDocketingCompleteResponse">
+    <wsdl:part name="body" element="wrappers:NotifyDocketingCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="NotifyDocumentStampInformationRequest">
+    <wsdl:part name="body" element="wrappers:NotifyDocumentStampInformationRequest" />
+  </wsdl:message>
+  <wsdl:message name="NotifyDocumentStampInformationResponse">
+    <wsdl:part name="body" element="wrappers:NotifyDocumentStampInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReviewFilingRequest">
+    <wsdl:part name="body" element="wrappers:ReviewFilingRequest" />
+  </wsdl:message>
+  <wsdl:message name="ReviewFilingResponse">
+    <wsdl:part name="body" element="wrappers:ReviewFilingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FilingReviewMDE">
+    <wsdl:operation name="CancelFiling">
+      <wsdl:input message="tns:CancelFilingRequest" />
+      <wsdl:output message="tns:CancelFilingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeesCalculation">
+      <wsdl:input message="tns:GetFeesCalculationRequest" />
+      <wsdl:output message="tns:GetFeesCalculationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilingList">
+      <wsdl:input message="tns:GetFilingListRequest" />
+      <wsdl:output message="tns:GetFilingListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilingStatus">
+      <wsdl:input message="tns:GetFilingStatusRequest" />
+      <wsdl:output message="tns:GetFilingStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDocketingComplete">
+      <wsdl:input message="tns:NotifyDocketingCompleteRequest" />
+      <wsdl:output message="tns:NotifyDocketingCompleteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDocumentStampInformation">
+      <wsdl:input message="tns:NotifyDocumentStampInformationRequest" />
+      <wsdl:output message="tns:NotifyDocumentStampInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ReviewFiling">
+      <wsdl:input message="tns:ReviewFilingRequest" />
+      <wsdl:output message="tns:ReviewFilingResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FilingReviewMDESoap" type="tns:FilingReviewMDE">
+    <wsp:PolicyReference URI="#MyPolicy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelFiling">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/CancelFiling" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFeesCalculation">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/GetFeesCalculation" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilingList">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/GetFilingList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilingStatus">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/GetFilingStatus" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDocketingComplete">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/NotifyDocketingComplete" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDocumentStampInformation">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/NotifyDocumentStampInformation" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReviewFiling">
+      <soap:operation soapAction="https://docs.oasis-open.org/legalxml-courtfiling/ns/v5.0WSDL/FilingReviewMDE/ReviewFiling" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE" xmlns:wsrmp="http://docs.oasis-open.org/ws-rx/wsrmp/200702" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wrappers="urn:tyler:ecf:v5.0:extensions:wrappers" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="MyPolicy">
+    <wsrmp:RMAssertion />
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="../../schema/extension/tylerwrappers.xsd" namespace="urn:tyler:ecf:v5.0:extensions:wrappers" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateDocumentRequest">
+    <wsdl:part name="body" element="wrappers:UpdateDocumentRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDocumentResponse">
+    <wsdl:part name="body" element="wrappers:UpdateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecordServiceRequest">
+    <wsdl:part name="body" element="wrappers:RecordServiceRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecordServiceResponse">
+    <wsdl:part name="body" element="wrappers:RecordServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecordReceiptRequest">
+    <wsdl:part name="body" element="wrappers:RecordReceiptRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecordReceiptResponse">
+    <wsdl:part name="body" element="wrappers:RecordReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="SecureCaseRequest">
+    <wsdl:part name="body" element="wrappers:SecureCaseRequest" />
+  </wsdl:message>
+  <wsdl:message name="SecureCaseResponse">
+    <wsdl:part name="body" element="wrappers:SecureCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCaseListRequest">
+    <wsdl:part name="body" element="wrappers:GetServiceCaseListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCaseListResponse">
+    <wsdl:part name="body" element="wrappers:GetServiceCaseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInformationHistoryRequest">
+    <wsdl:part name="body" element="wrappers:GetServiceInformationHistoryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceInformationHistoryResponse">
+    <wsdl:part name="body" element="wrappers:GetServiceInformationHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartyListRequest">
+    <wsdl:part name="body" element="wrappers:GetPartyListRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPartyListResponse">
+    <wsdl:part name="body" element="wrappers:GetPartyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartyRequest">
+    <wsdl:part name="body" element="wrappers:GetPartyRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPartyResponse">
+    <wsdl:part name="body" element="wrappers:GetPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCaseHearingsRequest">
+    <wsdl:part name="body" element="wrappers:GetCaseHearingsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCaseHearingsResponse">
+    <wsdl:part name="body" element="wrappers:GetCaseHearingsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TylerCourtRecordMDE">
+    <wsdl:operation name="UpdateDocument">
+      <wsdl:input message="tns:UpdateDocumentRequest" />
+      <wsdl:output message="tns:UpdateDocumentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecordService">
+      <wsdl:input message="tns:RecordServiceRequest" />
+      <wsdl:output message="tns:RecordServiceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecordReceipt">
+      <wsdl:input message="tns:RecordReceiptRequest" />
+      <wsdl:output message="tns:RecordReceiptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SecureCase">
+      <wsdl:input message="tns:SecureCaseRequest" />
+      <wsdl:output message="tns:SecureCaseResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCaseList">
+      <wsdl:input message="tns:GetServiceCaseListRequest" />
+      <wsdl:output message="tns:GetServiceCaseListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceInformationHistory">
+      <wsdl:input message="tns:GetServiceInformationHistoryRequest" />
+      <wsdl:output message="tns:GetServiceInformationHistoryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyList">
+      <wsdl:input message="tns:GetPartyListRequest" />
+      <wsdl:output message="tns:GetPartyListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParty">
+      <wsdl:input message="tns:GetPartyRequest" />
+      <wsdl:output message="tns:GetPartyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseHearings">
+      <wsdl:input message="tns:GetCaseHearingsRequest" />
+      <wsdl:output message="tns:GetCaseHearingsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TylerCourtRecordMDESoap" type="tns:TylerCourtRecordMDE">
+    <wsp:PolicyReference URI="#MyPolicy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateDocument">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/UpdateDocument" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecordService">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/RecordService" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecordReceipt">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/RecordReceipt" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SecureCase">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/SecureCase" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCaseList">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/GetServiceCaseList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceInformationHistory">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/GetServiceInformationHistory" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartyList">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/GetPartyList" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParty">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/GetParty" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCaseHearings">
+      <soap:operation soapAction="urn:tyler:ecf:v5.0:extensions:TylerCourtRecordMDE/GetCaseHearings" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>
